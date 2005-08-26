@@ -1,0 +1,17 @@
+dark_cal_att_gen project includes:
+	attitude.pl: a perl CGI script designed to be run from 
+		the ASPECT web page
+	table_17.csv: a table of Zodiacal Brightness values based
+		on table 17 of Leinert et al. (1998), A&AS, 127, 1.
+		This table is used by attitude.pl
+	dark_attitudes.dat: list of potential dark current calibration
+		attitudes based on number of stars; a subset of this
+		list is selected based on zodiacal light constraints
+		using attitude.pl 
+
+The attitude.pl script returns an empty form if no parameters have been
+submitted.  Part of the installation process is to actually use this to 
+make a separate html file that is then used as the index.html for the 
+project.  Thus, it makes good sense to edit the HTML generation code of 
+attitude.pl to modify the form page that will eventually become 
+index.html.
