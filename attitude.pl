@@ -570,3 +570,37 @@ return @satts;
 
 
 }
+
+# CODE HERE
+
+=head1 NAME
+
+attitude.pl - CGI Perl script to choose Dark Current Calibration Attitudes
+
+=head1 SYNOPSIS
+
+attitude.pl [options]
+
+=head1 OPTIONS
+
+=over 8
+
+=back
+
+=head1 DESCRIPTION
+
+B<attitude.pl> CGI Perl script that takes in parameters (from an
+	embedded form) for date, type (OR List or ATT List), and limits
+	on zodiacal light brightness, and returns a Pseudo-OR list or a
+	list of attitudes.  If given no parameters, the empty form is
+	returned.
+
+=head2 EXAMPLE
+
+Parameters may be inserted at the command line for testing:
+ 	
+attitude.pl date="2005:191" type="ATT List" z_low="0" z_up="250"
+
+=head1 AUTHOR
+
+Jean Connelly (jconnelly@cfa.harvard.edu)
