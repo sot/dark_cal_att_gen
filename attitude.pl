@@ -573,7 +573,7 @@ attitude.pl [options]
 =head1 DESCRIPTION
 
 B<attitude.pl> CGI Perl script that takes in parameters (from an
-	embedded form) for date, type (OR List or ATT List), and limits
+	external html form) for date, type (OR List or ATT List), and limits
 	on zodiacal light brightness, and returns a Pseudo-OR list or a
 	list of attitudes.  If given no parameters, the empty form is
 	returned.
