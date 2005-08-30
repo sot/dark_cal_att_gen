@@ -45,25 +45,8 @@ else{
 
 # if the form has not been submitted, display the form
 
-    print header(),"\n",   
-    start_html('Available Dark Cal Attitudes'),"\n",
-    "<!-- Don't edit this html file, edit the html generation code in Perl script instead -->\n",
-    h4('Available Dark Cal Attitudes'),"\n",
-    "<P>Enter a date in the form YYYY:DOY or YYYY-MMM-DD to see a list of possible ACA dark calibration attitudes for that date.</P>",
-    start_form,"\n",
-    "Date: ",textfield(-name=>'date'),p,"\n",
-    "Brightness<SUP>*</SUP> Lower Limit: ", textfield(-name=>'z_low',-value=>"0"), "Brightness Upper Limit: ", textfield(-name=>'z_up',-value=>"250"), p,
-    "Return Type: ", popup_menu(-name=>'type',
-				-values=>['OR List','ATT List']),p,
-    submit,"\n",
-    "<H4>This script sometimes takes quite a while to run.  Expect Delays.</H4>\n",
-    end_form,"\n",
-    hr,"\n",
-    "<SUP>*</SUP> Brightness in SI units. Values should be submitted in
-	10<SUP>-8</SUP> W m<SUP>-2</SUP>sr<SUP>-1</SUP>&#181;m
-	<SUP>-1</SUP>, for a wavelength of 0.50 &#181;m.\n",
-    "<br /><br />",
-    end_html();
+print 'Status: 302 Moved', "\r\n", 'Location: http://asc.harvard.edu/mta/ASPECT/dark_att_generator/',"\r\n\r\n";
+
 }
 
 ##**************************************************************************

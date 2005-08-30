@@ -6,7 +6,6 @@ doc:
 
 install: $(objects)
 	rsync --times --cvs-exclude $(objects) /proj/sot/ska/www/ASPECT/dark_att_generator/
-	wget -O index.html http://asc.harvard.edu/mta/ASPECT/dark_att_generator/attitude.pl
 	rsync --times --cvs-exclude index.html /proj/sot/ska/www/ASPECT/dark_att_generator/
 
 test: $(objects) test_ATTList_2005001 test_ORList_2005001
