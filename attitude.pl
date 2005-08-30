@@ -572,11 +572,13 @@ attitude.pl [options]
 
 =head1 DESCRIPTION
 
-B<attitude.pl> CGI Perl script that takes in parameters (from an
-	external html form) for date, type (OR List or ATT List), and limits
-	on zodiacal light brightness, and returns a Pseudo-OR list or a
-	list of attitudes.  If given no parameters, the empty form is
-	returned.
+B<attitude.pl> 
+
+	CGI Perl script that takes in parameters (from an  
+	external html form) for date, type (OR List or ATT List), and 
+	limits on zodiacal light brightness, and returns a Pseudo-OR 
+	list or a list of attitudes.  If given no parameters, the empty 
+	form is returned.
 
 	Both return types have the list of attitudes in sorted order first 
 	by the number of 9.0 magnitude or greater stars then by the 
