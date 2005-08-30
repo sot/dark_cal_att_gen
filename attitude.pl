@@ -583,6 +583,10 @@ B<attitude.pl>
 	Both return types have the list of attitudes in sorted order first 
 	by the number of 9.0 magnitude or greater stars then by the 
 	zodiacal brightness.
+
+	Zodiacal brightness is calculated using a table of zodiacal 
+	brightness values based on table 17 of 
+	Leinert et al. (1998), A&AS, 127, 1 .
 	
 	The list of attitudes (returned from the "ATT List" menu choice) 
 	shows the complete list of potential dark current calibration 
