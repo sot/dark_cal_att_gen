@@ -600,7 +600,8 @@ B<attitude.pl>
 
 Parameters may be inserted at the command line for testing:
  	
-attitude.pl date="2005:191" type="ATT List" z_low="0" z_up="250"
+
+	attitude.pl date="2005:191" type="ATT List" z_low="0" z_up="250"
 
 =head1 AUTHOR
 
