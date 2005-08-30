@@ -580,8 +580,8 @@ B<attitude.pl>
 	list or a list of attitudes.  If given no parameters, the empty 
 	form is returned.
 
-	Both return types have the list of attitudes in sorted order first 
-	by the number of 9.0 magnitude or greater stars then by the 
+	Both return types display the list of attitudes in sorted order 
+	first by the number of 9.0 magnitude or greater stars then by the 
 	zodiacal brightness.
 
 	Zodiacal brightness is calculated using a table of zodiacal 
