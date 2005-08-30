@@ -578,6 +578,22 @@ B<attitude.pl> CGI Perl script that takes in parameters (from an
 	list of attitudes.  If given no parameters, the empty form is
 	returned.
 
+	Both return types have the list of attitudes in sorted order first 
+	by the number of 9.0 magnitude or greater stars then by the 
+	zodiacal brightness.
+	
+	The list of attitudes (returned from the "ATT List" menu choice) 
+	shows the complete list of potential dark current calibration 
+	attitudes.  Those with zodiacal brightness outside the limits 
+	specified by the input form have that zodiacal brightness 
+	printed in red.
+
+	The Pseudo-OR list is designed to be used with flight tools.  
+	Attitudes that have zodiacal brightness outside the specified 
+	limits are not included in this format list.
+	Note that the IDs are just consecutive.
+
+
 =head2 EXAMPLE
 
 Parameters may be inserted at the command line for testing:
