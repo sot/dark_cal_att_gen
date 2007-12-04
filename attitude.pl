@@ -342,6 +342,10 @@ sub printAttitudes{
 # Add the zodi information to the attitude array/hash
 	$attitudes[$j]{zodi} = $zodi;
 	
+	if ($pos_ra < 0){
+	    $pos_ra+=360;
+	}
+
 #	print "Zodi = $zodi \n";
 #	print "z_up_limit = $z_up_limit \n";
 #	print "z_low_limit = $z_low_limit \n";
