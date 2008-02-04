@@ -45,7 +45,7 @@ else{
 
 # if the form has not been submitted, display the form
 
-print 'Status: 302 Moved', "\r\n", 'Location: http://asc.harvard.edu/mta/ASPECT/dark_att_generator/',"\r\n\r\n";
+print 'Status: 302 Moved', "\r\n", 'Location: https://icxc.harvard.edu/cgi-bin/aspect/dark_att_generator/',"\r\n\r\n";
 
 }
 
