@@ -13,7 +13,7 @@ doc: $(objects)
 
 install: $(objects) doc
 	rsync -v --times --cvs-exclude $(objects) dark_cal_help.html $(webloc)
-    rsync -v --times --cvs-exclude $(cxcobjects) $(cxcwebloc)
+	rsync -v --times --cvs-exclude $(cxcobjects) $(cxcwebloc)
 
 test: $(objects) t/test_ATTList_2005001 t/test_ORList_2005001
 	./attitude.pl date="2005:001" type="ATT List" z_low="0" z_up="250" > new_test_ATTList
