@@ -16,6 +16,7 @@ use Ska::Process;
 use CGI qw/:standard/;
 #use CGI::Carp qw(fatalsToBrowser);
 
+my $task = 'dark_cal_att_gen';
 
 my @attitudes;
 
@@ -55,7 +56,7 @@ sub readAttitudes{
 # read in all dark attitudes and store them in an array
 # of hashes
 
-    open ATT, 'full_dark_attitudes.dat' or die $!;
+    open ATT, "$ENV{SKA_DATA}/${task}/full_dark_attitudes.dat" or die $!;
     
     while (<ATT>){
 	$_ =~ s/^\s*//;

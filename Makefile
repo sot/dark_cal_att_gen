@@ -1,23 +1,19 @@
-objects = attitude.pl index.html dark_attitudes.dat table_17.csv
+# Set the task name
+TASK = dark_cal_att_gen
 
-#webloc = /proj/sot/ska/www/ASPECT/dark_att_generator/
+FLIGHT_ENV = SKA
 
-webloc = /proj/web-icxc/cgi-bin/aspect/dark_att_generator/
+SHARE = attitude.pl filter_atts_for_fot.py
+DATA = full_dark_attitudes.dat table_17.csv task_schedule.cfg
 
-cxcobjects = index.html
+webfiles = index.html
 cxcwebloc = /proj/sot/ska/www/ASPECT/dark_att_generator/
 
+install: $(webfiles)
+	rsync -v --times --cvs-exclude $(webfiles) $(cxcwebloc)
+	mkdir -p $(INSTALL_DATA)
+	mkdir -p $(INSTALL_SHARE)
+	rsync --times --cvs-exclude $(SHARE) $(INSTALL_SHARE)
+	rsync --times --cvs-exclude $(DATA) $(INSTALL_DATA)
 
-doc: $(objects)
-	pod2html attitude.pl > dark_cal_help.html
-
-install: $(objects) doc
-	rsync -v --times --cvs-exclude $(objects) dark_cal_help.html $(webloc)
-	rsync -v --times --cvs-exclude $(cxcobjects) $(cxcwebloc)
-
-test: $(objects) t/test_ATTList_2005001 t/test_ORList_2005001
-	./attitude.pl date="2005:001" type="ATT List" z_low="0" z_up="250" > new_test_ATTList
-	./attitude.pl date="2005:001" type="OR List" z_low="0" z_up="250"  > new_test_ORList
-	diff new_test_ATTList t/test_ATTList_2005001
-	diff new_test_ORList t/test_ORList_2005001
 

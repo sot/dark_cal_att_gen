@@ -3,17 +3,19 @@ dark_cal_att_gen project includes:
 	Makefile
 	README: this text
 
-	attitude.pl: a perl CGI script designed to be run from 
-		the ASPECT web page
+	attitude.pl: a perl CGI script originally designed to be run
+		the ASPECT web page, but now used to just filter a text file
 	table_17.csv: a table of Zodiacal Brightness values based
 		on table 17 of Leinert et al. (1998), A&AS, 127, 1.
 		This table is used by attitude.pl
-	dark_attitudes.dat: list of potential dark current calibration
+	full_dark_attitudes.dat: list of potential dark current calibration
 		attitudes based on number of stars; a subset of this
 		list is selected based on zodiacal light constraints
-		using attitude.pl 
-	index.html: an html page with a form to call attitude.pl
+		using attitude.pl
+	index.html: an html page with text indicating that the CGI is deprecated
+        filter_atts_for_fot.py: Python script to filter the full_dark_attitudes.dat
+                file and return the list of attitudes that would have appropriate
+                zodiacal brightness if a calibration were run at a specified date
+                (default is two weeks from now).
 
-	t/test_ORList_2005001
-	t/test_ATTList_2005001	
-		Sample output data files for "make test" comparisons
+
