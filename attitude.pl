@@ -55,7 +55,7 @@ sub readAttitudes{
 # read in all dark attitudes and store them in an array
 # of hashes
 
-    open ATT, 'dark_attitudes.dat' or die $!;
+    open ATT, 'full_dark_attitudes.dat' or die $!;
     
     while (<ATT>){
 	$_ =~ s/^\s*//;

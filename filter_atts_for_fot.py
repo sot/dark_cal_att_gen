@@ -39,7 +39,7 @@ def filter_atts(date):
     zodi_ok = (zodi_list['Zodi'] >= Z_LOW) & (zodi_list['Zodi'] <= Z_UP)
     zodi_ok_coords = SkyCoord(zodi_list[zodi_ok]['RA'], zodi_list[zodi_ok]['DEC'], unit='deg')
 
-    all_atts = Table.read('dark_attitudes.dat', format='ascii.fixed_width_two_line')
+    all_atts = Table.read('full_dark_attitudes.dat', format='ascii.fixed_width_two_line')
     ok = []
     for att in all_atts:
         coord = SkyCoord(att['eq_ra'], att['eq_dec'], unit='deg')
@@ -52,5 +52,5 @@ if __name__ == '__main__':
     opt = get_options()
     date = DateTime(opt.date)
     cut_list = filter_atts(date)
-    cut_list.write("{}_dark_attitudes.dat".format(date.date[0:8]),
+    cut_list.write("dark_attitudes.dat",
                    format='ascii.fixed_width_two_line')
