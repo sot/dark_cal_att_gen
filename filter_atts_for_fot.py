@@ -40,8 +40,8 @@ def filter_atts(date):
         'perl {}/attitude.pl date="{date}" type="ATT List" z_low="{z_low}" z_up="{z_up}"'.format(
             SHARE, date=date[0:8], z_low=Z_LOW, z_up=Z_UP))
     zodi_list = Table.read(zodi_annotated_html, format='ascii.html')
-    zodi_ok = (zodi_list['Zodi'] >= Z_LOW) & (zodi_list['Zodi'] <= Z_UP)
-    zodi_ok_coords = SkyCoord(zodi_list[zodi_ok]['RA'], zodi_list[zodi_ok]['DEC'], unit='deg')
+    ok = (zodi_list['Zodi'] >= Z_LOW) & (zodi_list['Zodi'] <= Z_UP)
+    zodi_ok_coords = SkyCoord(zodi_list[ok]['RA'], zodi_list[ok]['DEC'], unit='deg')
 
     all_atts = Table.read(os.path.join(DATA, 'full_dark_attitudes.dat'),
                           format='ascii.fixed_width_two_line')
