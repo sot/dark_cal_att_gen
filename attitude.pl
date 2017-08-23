@@ -269,7 +269,7 @@ sub loadTable{
 
     my @datatable;
 	
-    open TAB, 'table_17.csv' or die $!;
+    open TAB, "$ENV{SKA_DATA}/${task}/table_17.csv" or die $!;
 
     while (<TAB>){
 	if ($_ ne ""){
