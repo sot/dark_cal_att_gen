@@ -3,6 +3,8 @@ TASK = dark_cal_att_gen
 
 FLIGHT_ENV = SKA
 
+include /proj/sot/ska/include/Makefile.FLIGHT
+
 SHARE = attitude.pl filter_atts_for_fot.py
 DATA = full_dark_attitudes.dat table_17.csv task_schedule.cfg
 
